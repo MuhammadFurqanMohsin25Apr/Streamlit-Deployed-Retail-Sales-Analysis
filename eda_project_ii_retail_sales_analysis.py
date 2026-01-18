@@ -18,7 +18,7 @@ st.title("Retail Sales Analysis (EDA)")
 @st.cache_data
 
 def load_data():
-    df = pd.read_csv("C:\\Users\\Admin\\Desktop\\Streamlit\\Online_Retail.csv",encoding='ISO-8859-1')
+    df = pd.read_csv("Online_Retail.csv",encoding='ISO-8859-1')
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
     df = df.dropna(subset=['CustomerID','Description'])
     df['Amount'] = df['Quantity'] * df['UnitPrice']
